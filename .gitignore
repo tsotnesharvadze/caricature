@@ -1,0 +1,6 @@
+__pycahe__/
+*.pyc
+.idea/
+.vscode/
+Env/
+*.sqlite3

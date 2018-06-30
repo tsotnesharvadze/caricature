@@ -4,3 +4,5 @@ __pycahe__/
 .vscode/
 Env/
 *.sqlite3
+static/
+media/

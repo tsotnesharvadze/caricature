@@ -21,7 +21,10 @@ div, ul, li{
     padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
     margin-bottom: 2.5%;
   }
-  
+  #Grid li img{
+    width: 100%;
+    height: 297px;
+  }
   #Grid:after{
     content: '';
     display: inline-block;

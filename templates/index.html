@@ -1,44 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="">
 
 <head>
-    <link rel="stylesheet" href="static/css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/pagination.css">
+    <script src="/static/js/jquery.js"></script>
 </head>
 
 <body>
-    <div>
-        <h1>Fluid Grid using text-align: justify</h1>
+    <div class="body-cont" id="vue_body">
+        <div class="body-row">
+            <cimage v-for="(image, index) in images" :image="image" :key="index"></cimage>
+        </div>
+        <div class="cls"></div>
+        <div id="pagination">
 
-        <!-- FLUID GRID -->
+            <div class="pagination-wrapper">
+                <div :hidden="!previous_page">
+                    <svg class="btn btn--prev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="prevPage">
+                        <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
+                        <path d="M0-.5h24v24H0z" fill="none" />
+                    </svg>
+                </div>
 
-        <ul id="Grid">
-            {% for obj in objs %}
-            <li>
-                <img scr="{{obj.image.url}}">
-            </li>
-            {% endfor %}
-            <li class="placeholder"></li>
-        </ul>
+                <div class="pagination-container">
+                    <div class="little-dot  little-dot--first"></div>
+                    <div class="little-dot">
+                        <div class="big-dot-container">
+                            <div class="big-dot"></div>
+                        </div>
+                    </div>
+                    <div class="little-dot  little-dot--last"></div>
+                </div>
 
-        <!-- LEGEND -->
-
-        <p>Resize the grid to see how the elements reflow based on the new column-widths defined in the media queries.
-            <br/>
-            <strong>There is no need to ever define horizontal margins/floats/or clear-fixes.</strong>
-        </p>
-
-
-        <label>Placeholder/gap element*</label>
-        <label>Break element*</label>
-
-        <p>
-            <em>*These elements are visible only for demonstration purposes and should be hidden in production by removing the
-                borders.</em>
-        </p>
-
-        <p>More info here:
-            <a target="_blank" href="http://www.barrelny.com/blog/text-align-justify-and-rwd/">here</a>
-        </p>
+                <div :hidden="!next_page">
+                    <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="nextPage">
+                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+                        <path d="M0-.25h24v24H0z" fill="none" />
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/vue_pagination.js"></script>
+    <script src="/static/js/custom_vue.js"></script>
+    <script src="/static/js/pagination.js"></script>
 </body>
 
 </html>

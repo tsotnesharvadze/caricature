@@ -1,98 +1,82 @@
-/* -- DEFAULTS -- */
+body {
+    margin: 0px;
+    background: #ffdada;
+}
 
-div, ul, li{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  /* -- FLUID GRID STYLES -- */
-  
-  #Grid{
-    margin-bottom: 40px;
-    text-align: justify;
-    font-size: 0.1px;
-  }
-  
-  #Grid li{
-    display: inline-block;
-    background: #eee;
-    width: 23%;
-    padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
-    margin-bottom: 2.5%;
-  }
-  #Grid li img{
+.image-block img {
     width: 100%;
-    height: 297px;
-  }
-  #Grid:after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-    border-top: 10px dashed #922d8d; /* Border added to make element visible for demonstration purposes */
-  }
-  
-  #Grid .placeholder{
-    padding: 0;
-    border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
-  }
-  
-  /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
-  
-  /* 3 COL */
-  
-  @media (max-width: 800px){
-    #Grid li{
-      width: 31%;
-      padding-top: 31%;
-      margin-bottom: 3%;
-    }
-  }
-  
-  /* 2 COL */
-  
-  @media (max-width: 600px){
-    #Grid li{
-      width: 48%;
-      padding-top: 48%;
-      margin-bottom: 4%;
-    }
-  }
-  
-  /* SINGLE COL */
-  
-  @media (max-width: 400px){
-    #Grid li{
-      width: 100%;
-      padding-top: 100%;
-      margin-bottom: 5%;
-    }
-  }
-  
-  
-  /* -- LEGEND STYLES (NOT PART OF GRID FRAMEWORK) -- */
-  
-  h1{
-    font: 600 20px "Helvetica Neue";
-    text-align: right;
-    text-transform: uppercase;
-  }
-  
-  label{
-    padding: 8px 15px;
-    margin-bottom: 20px;
-    display: block;
-    font: 100 22px "Helvetica Neue"; 
-    border-left: 10px solid #922d8d;
-  }
-  
-  label:last-of-type{
-    border-left: 10px dotted #922d8d;
-  }
-  
-  p{
-    font: 200 15px/1.5em "Helvetica Neue";
-    max-width: 400px;
+}
+
+.col-halfquart {
+    float: left;
+    width: 25%;
     margin-bottom: 30px;
-    color: #333;
-  }
+}
+
+.each_item {
+    margin: 0px 15px;
+    background: #fff;
+}
+
+.each_item_in {
+    padding: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.body-row {
+    margin: 0px -15px;
+}
+
+.body-cont {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.image-block {
+    margin-bottom: 15px;
+    min-height: 50px;
+
+}
+
+.input-block {
+    width: 100%;
+}
+
+.input-block input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+    padding-left: 8px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    outline: 0;
+}
+.save-button{
+    text-align: center;
+    margin-top: 4px;
+}
+.save-button button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 24px;
+}
+.cls{clear: both;}
+
+/* @media screen and (max-width: 768px) {
+
+    .image-block {
+        min-height: 190px;
+    
+    }
+    
+} */
